@@ -1,0 +1,19 @@
+.object-sort-fieldset {
+	display: flex;
+	align-item: flex-start;
+	justify-content: flex-end;
+}
+.object-sort-fieldset > .elgg-field {
+	flex: 0 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0;
+	padding: 5px;
+}
+.object-sort-fieldset > .elgg-field.object-sort-query-field {
+	flex: 1 1 auto;
+}
+.object-sort-fieldset > .elgg-field > .elgg-field-label {
+    margin-right: 5px;
+}
