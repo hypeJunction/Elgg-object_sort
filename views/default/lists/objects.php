@@ -13,7 +13,7 @@ if (!$subtypes) {
 	$subtypes = elgg_extract('subtypes', $options);
 }
 if (!$subtypes) {
-	$subtypes = elgg_extract('subtype', $vars, get_input('subtype'));
+	$subtypes = elgg_extract('subtype', $vars, get_input('entity_subtype'));
 }
 
 $vars['subtype'] = $subtypes ? : ''; // filter
