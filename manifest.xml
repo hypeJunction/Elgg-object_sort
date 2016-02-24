@@ -6,7 +6,7 @@
 
 	<description>API and UI for sorting object lists</description>
 	<category>objects</category>
-	<version type="dist">1.1.1</version>
+	<version type="dist">1.1.2</version>
 
 	<author>Ismayil Khayredinov (inof@hypejunction.com)</author>
 	<website>http://www.hypejunction.com/</website>

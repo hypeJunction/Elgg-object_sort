@@ -1,3 +1,13 @@
+<a name="1.1.2"></a>
+## [1.1.2](https://github.com/hypeJunction/Elgg-object_sort/compare/1.1.1...v1.1.2) (2016-02-24)
+
+
+### Bug Fixes
+
+* **forms:** default to if multiple subtypes are present ([f24abb6](https://github.com/hypeJunction/Elgg-object_sort/commit/f24abb6))
+
+
+
 <a name="1.1.1"></a>
 ## [1.1.1](https://github.com/hypeJunction/Elgg-object_sort/compare/1.1.0...v1.1.1) (2016-02-24)
 
