@@ -21,7 +21,7 @@ foreach ($sort_options as $option) {
 		'type' => 'checkbox',
 		'name' => "params[$option]",
 		'value' => 1,
-		'checked' => ($entity->$option),
+		'checked' => ($entity->$option == 1),
 	));
 	$label = elgg_format_element('label', [],  $input . elgg_echo("object:sort:$option"));
 	$inputs .= elgg_format_element('li', [], $label);
