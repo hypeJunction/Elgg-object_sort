@@ -207,6 +207,8 @@ function object_sort_add_search_query_options(array $options = array(), $query =
 		return $options;
 	}
 
+	$query = sanitize_string($query);
+	
 	$dbprefix = elgg_get_config('dbprefix');
 	$options['joins']['objects_entity'] = "JOIN {$dbprefix}objects_entity AS objects_entity ON objects_entity.guid = e.guid";
 
