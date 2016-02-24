@@ -99,7 +99,7 @@ function object_sort_add_sort_options(array $options = array(), $field = 'time_c
 			$name_id = elgg_get_metastring_id('likes');
 			$options['joins']['likes_count'] = "LEFT JOIN {$dbprefix}annotations AS likes ON likes.entity_guid = e.guid AND likes.name_id = $name_id";
 			$options['selects']['likes_count'] = "COUNT(likes.id) as likes_count";
-			$options['group_by'] = 'likes.entity_guid';
+			$options['group_by'] = 'e.guid';
 
 			array_unshift($order_by, "likes_count {$direction}");
 			break;
@@ -112,7 +112,7 @@ function object_sort_add_sort_options(array $options = array(), $field = 'time_c
 
 			$options['joins']['responses_count'] = "LEFT JOIN {$dbprefix}entities AS responses ON responses.container_guid = e.guid AND responses.type = 'object' AND responses.subtype IN ($ids_in)";
 			$options['selects']['responses_count'] = "COUNT(responses.guid) as responses_count";
-			$options['group_by'] = 'responses.guid';
+			$options['group_by'] = 'e.guid';
 
 			array_unshift($order_by, "responses_count {$direction}");
 			break;
