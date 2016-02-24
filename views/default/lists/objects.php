@@ -7,6 +7,18 @@ if (!is_array($options) || empty($options) || !is_callable($callback)) {
 	return;
 }
 
+$subtypes = elgg_extract('subtype', $options);
+unset($options['subtype']);
+if (!$subtypes) {
+	$subtypes = elgg_extract('subtypes', $options);
+}
+if (!$subtypes) {
+	$subtypes = elgg_extract('subtype', $vars, get_input('subtype'));
+}
+
+$vars['subtype'] = $subtypes ? : ''; // filter
+$options['subtypes'] = $subtypes ? (array) $subtypes : ELGG_ENTITIES_ANY_VALUE;
+
 $rel = elgg_extract('rel', $vars, get_input('rel'));
 $vars['rel'] = $rel;
 

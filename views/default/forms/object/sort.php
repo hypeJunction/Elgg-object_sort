@@ -2,6 +2,27 @@
 
 $fields = '';
 
+if (elgg_extract('show_subtype', $vars, false)) {
+	$types = get_registered_entity_types();
+	$types = elgg_trigger_plugin_hook('search_types', 'get_queries', $params, $types);
+
+	$subtypes = elgg_extract('object', $types);
+	if (!empty($subtypes)) {
+		$subtype_options_values = array('' => elgg_echo('object:subtype:all'));
+		foreach ($subtypes as $subtype) {
+			$subtype_options_values[$subtype] = elgg_echo("item:object:$subtype");
+		}
+		$fields .= elgg_view_input('select', array(
+			'name' => 'subtype',
+			'value' => elgg_extract('subtype', $vars, ''),
+			'options_values' => $subtype_options_values,
+			'class' => 'object-sort-select',
+			'label' => elgg_echo('object:subtype:label'),
+			'field_class' => 'object-sort-select-field',
+		));
+	}
+}
+
 if (elgg_extract('show_rel', $vars, false)) {
 	$rel_options = object_sort_get_rel_options($vars);
 	if (!empty($rel_options)) {

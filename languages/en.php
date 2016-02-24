@@ -22,6 +22,9 @@ return [
 	'object:sort:last_action::desc' => 'Latest activity first',
 	'object:sort:last_action::asc' => 'Latest activity last',
 
+	'object:subtype:label' => 'Show',
+	'object:subtype:all' => 'All',
+	
 	'object:sort:search_tags' => 'Enable tag search',
 	'object:sort:search_tags:help' => 'If enabled, tag search will be included in the keyword search for lists that do not explicitly require it',
 ];
