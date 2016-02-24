@@ -12,9 +12,13 @@ if (elgg_extract('show_subtype', $vars, false)) {
 		foreach ($subtypes as $subtype) {
 			$subtype_options_values[$subtype] = elgg_echo("item:object:$subtype");
 		}
+		$subtype_value = elgg_extract('subtype', $vars, '');
+		if (is_array($subtype_value) && sizeof($subtype_value) > 1) {
+			$subtype_value = '';
+		}
 		$fields .= elgg_view_input('select', array(
 			'name' => 'entity_subtype',
-			'value' => elgg_extract('subtype', $vars, ''),
+			'value' => $subtype_value,
 			'options_values' => $subtype_options_values,
 			'class' => 'object-sort-select',
 			'label' => elgg_echo('object:subtype:label'),
