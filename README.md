@@ -2,6 +2,9 @@ Object List Sorting for Elgg
 ============================
 ![Elgg 2.0](https://img.shields.io/badge/Elgg-2.0.x-orange.svg?style=flat-square)
 
+*** NO LONGER MAINTAINED ***
+The functionality of this plugin has been moved to [hypeLists](https://github.com/hypeJunction/hypeLists)
+
 ## Features
 
  * Implements generic API and UI for sorting object lists
